@@ -1,16 +1,17 @@
-#include <stdlib.h>;
+#include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 
 typedef struct
 {
     int value;
-    QueueElement* next;
+    struct QueueElement* next;
 }QueueElement;
 
 typedef struct
 {
-    QueueElement* head;
-    QueueElement* tail;
+    struct QueueElement* head;
+    struct QueueElement* tail;
 }Queue;
 
 Queue* createQueue(void)
