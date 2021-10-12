@@ -1,26 +1,42 @@
-#include <stdlib.h>;
+#include <stdlib.h>
 #include <stdbool.h>
+#include <stdio.h>
 
 typedef struct
 {
     int value;
-    QueueElement* next;
+    struct QueueElement* next;
 }QueueElement;
 
 typedef struct
 {
-    QueueElement* head;
-    QueueElement* tail;
+    struct QueueElement* head;
+    struct QueueElement* tail;
 }Queue;
 
 Queue* createQueue(void)
 {
-
+    Queue* newQueue = calloc(1,sizeof(Queue));         
+    if (newQueue == NULL)
+    {
+        return NULL;
+    }
+    return newQueue;
 }
 
-void enQueue(Queue* queue, int value)
-{
 
+int enQueue(Queue* queue, int value) //äîáàâëÿåò â õâîñò
+{
+    QueueElement* element = calloc(1, sizeof(QueueElement));
+    if (element == NULL)
+    {
+        return 1;
+    }
+
+    element->value = value;
+    element->next = queue->tail;
+    queue->tail = element;
+    return 0;
 }
 
 int deQueue(Queue* queue)
