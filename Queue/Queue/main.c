@@ -24,7 +24,8 @@ Queue* createQueue(void)
     return newQueue;
 }
 
-int enQueue(Queue* queue, int value) //добавляет в хвост
+
+int enQueue(Queue* queue, int value) //Г¤Г®ГЎГ ГўГ«ГїГҐГІ Гў ГµГўГ®Г±ГІ
 {
     QueueElement* element = calloc(1, sizeof(QueueElement));
     if (element == NULL)
@@ -38,19 +39,26 @@ int enQueue(Queue* queue, int value) //добавляет в хвост
     return 0;
 }
 
-int deQueue(Queue* queue) // удаляет в голову
+int deQueue(Queue* queue)
 {
 
 }
 
 bool isEmpty(Queue* queue)
 {
-
+    return queue->head == NULL;
 }
 
 void deleteQueue(Queue* queue)
 {
+    while (!isEmpty(queue))
+    {
+        QueueElement* oldHead = queue->head;
+        queue->head = queue->head->next;
+        free(oldHead);
+    }
 
+    free(queue);
 }
 
 int main()
