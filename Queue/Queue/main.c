@@ -16,7 +16,12 @@ typedef struct
 
 Queue* createQueue(void)
 {
-
+    Queue* newQueue = calloc(1,sizeof(Queue));         
+    if (newQueue == NULL)
+    {
+        return NULL;
+    }
+    return newQueue;
 }
 
 int enQueue(Queue* queue, int value) //добавляет в хвост
