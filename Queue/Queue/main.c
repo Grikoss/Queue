@@ -24,7 +24,6 @@ Queue* createQueue(void)
     return newQueue;
 }
 
-
 int enQueue(Queue* queue, int value) //äîáàâëÿåò â õâîñò
 {
     QueueElement* element = calloc(1, sizeof(QueueElement));
@@ -41,7 +40,11 @@ int enQueue(Queue* queue, int value) //äîáàâëÿåò â õâîñò
 
 int deQueue(Queue* queue)
 {
-
+    int number = queue->head->value;
+    QueueElement* temporaryQueueElement = queue->head;
+    queue->head = queue->head->next;
+    free(temporaryQueueElement);
+    return number;
 }
 
 bool isEmpty(Queue* queue)
@@ -57,11 +60,15 @@ void deleteQueue(Queue* queue)
         queue->head = queue->head->next;
         free(oldHead);
     }
-
     free(queue);
 }
 
 int main()
 {
-
+    QueueElement* queueElement = NULL;
+    QueueElement queueElement1 = { .value = 10, .next = queueElement};
+    QueueElement queueElement2 = { .value = 20, .next = &queueElement1};
+    Queue* queue = malloc(sizeof(Queue));
+    queue->head = &queueElement2;
+    queue->tail = queueElement;
 }
