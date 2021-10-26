@@ -55,8 +55,7 @@ int next(Position* position) // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï
     {
         return -1;
     }
-    Position* newPosition = calloc(1, sizeof(position));
-    newPosition->position = position->position->next; 
+    position->position = position->position->next;
     return 0;
 }
 
@@ -66,8 +65,7 @@ int previous(Position* position) // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     {
         return -1;
     }
-    Position* newPosition = calloc(1, sizeof(position));
-    newPosition->position = position->position->previous;
+    position->position = position->position->previous;
     return 0;
 }
 
