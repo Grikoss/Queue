@@ -49,14 +49,26 @@ void last(List* list, Position* position)
     position->position = list->tail;
 }
 
-void next(Position* position) // �� ������ ��������� �� NULL
+int next(Position* position) // �� ������ ��������� �� NULL
 {
-
+    if (position->position->next == NULL)
+    {
+        return -1;
+    }
+    Position* newPosition = calloc(1, sizeof(position));
+    newPosition->position = position->position->next; 
+    return 0;
 }
 
-void previous(Position* position) // �� ������ ��������� �� NULL
+int previous(Position* position) // �� ������ ��������� �� NULL
 {
-
+    if (position->position->previous == NULL)
+    {
+        return -1;
+    }
+    Position* newPosition = calloc(1, sizeof(position));
+    newPosition->position = position->position->previous;
+    return 0;
 }
 
 void remove(List* list, Position* position)
