@@ -22,7 +22,7 @@ typedef struct Position
 
 List* createList()
 {
-
+    return calloc(1, sizeof(List));
 }
 
 Position* createPosition()
