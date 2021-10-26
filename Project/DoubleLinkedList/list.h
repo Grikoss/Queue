@@ -15,9 +15,9 @@ void first(Position* position);
 
 void last(Position* position);
 
-void next(Position* position);
+int next(Position* position);
 
-void previous(Position* position);
+int previous(Position* position);
 
 void remove(List* list, Position* position);
 

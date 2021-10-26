@@ -45,14 +45,26 @@ void last(Position* position)
 
 }
 
-void next(Position* position) // Не забудб проверить на NULL
+int next(Position* position) // Не забудб проверить на NULL
 {
-
+    if (position->position->next == NULL)
+    {
+        return -1;
+    }
+    Position* newPosition = calloc(1, sizeof(position));
+    newPosition->position = position->position->next; 
+    return 0;
 }
 
-void previous(Position* position) // Не забудб проверить на NULL
+int previous(Position* position) // Не забудб проверить на NULL
 {
-
+    if (position->position->previous == NULL)
+    {
+        return -1;
+    }
+    Position* newPosition = calloc(1, sizeof(position));
+    newPosition->position = position->position->previous;
+    return 0;
 }
 
 void remove(List* list, Position* position)
