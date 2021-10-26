@@ -45,12 +45,12 @@ void last(Position* position)
 
 }
 
-void next(Position* position) // Не забудб проверить на NULL
+void next(Position* position) // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NULL
 {
 
 }
 
-void previous(Position* position) // Не забудб проверить на NULL
+void previous(Position* position) // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NULL
 {
 
 }
@@ -62,7 +62,7 @@ void remove(List* list, Position* position)
 
 void deletePosition(Position* position)
 {
-
+    free(position);
 }
 
 int value(Position* position)
