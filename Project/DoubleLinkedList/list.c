@@ -104,7 +104,7 @@ void addBefore(List* list, Position* position, int value)
         list->head = newElement;
     }
     position->position->previous = newElement;
-    position->position = newElement;
+    position->position - newElement;
 }
 
 void addNext(List* list, Position* position)
