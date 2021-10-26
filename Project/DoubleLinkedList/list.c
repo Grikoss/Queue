@@ -45,16 +45,6 @@ void last(Position* position)
 
 }
 
-void next(Position* position) // �� ������ ��������� �� NULL
-{
-
-}
-
-void previous(Position* position) // �� ������ ��������� �� NULL
-{
-
-}
-
 void remove(List* list, Position* position)
 {
 
