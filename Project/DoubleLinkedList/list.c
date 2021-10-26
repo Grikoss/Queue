@@ -32,7 +32,11 @@ Position* createPosition()
 
 bool isEnd(Position* position)
 {
-
+    if (position->position->next == NULL)
+    {
+        return true;
+    }
+    return false;
 }
 
 void first(Position* position)
@@ -45,12 +49,12 @@ void last(Position* position)
 
 }
 
-void next(Position* position) // Не забудб проверить на NULL
+void next(Position* position) // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NULL
 {
 
 }
 
-void previous(Position* position) // Не забудб проверить на NULL
+void previous(Position* position) // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NULL
 {
 
 }
