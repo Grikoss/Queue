@@ -96,7 +96,20 @@ void addBefore(List* list, Position* position)
 
 }
 
-void addNext(List* list, Position* position)
+void addNext(List* list, Position* position, int value)
 {
-
+    Element* newElement = calloc(1, sizeof(Element));
+    newElement->value = value;
+    newElement->next = position->position->next;
+    newElement->previous = position->position;
+    if (position->position != list->tail)
+    {
+        position->position->next->previous = newElement;
+    }
+    else
+    {
+        list->tail = newElement;
+    }
+    position->position->next = newElement;
+    position->position = newElement;
 }

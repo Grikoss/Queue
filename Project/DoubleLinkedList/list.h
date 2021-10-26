@@ -29,4 +29,4 @@ void setValue(Position* position, int value);
 
 void addBefore(List* list, Position* position);
 
-void addNext(List* list, Position* position);
+void addNext(List* list, Position* position, int value);
