@@ -11,9 +11,9 @@ Position* createPosition();
 
 bool isEnd(Position* position);
 
-void first(Position* position);
+void first(List* list, Position* position);
 
-void last(Position* position);
+void last(List* list, Position* position);
 
 void next(Position* position);
 
