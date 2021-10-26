@@ -27,6 +27,6 @@ int value(Position* position);
 
 void setValue(Position* position, int value);
 
-void addBefore(List* list, Position* position);
+void addBefore(List* list, Position* position, int value);
 
 void addNext(List* list, Position* position);
