@@ -27,7 +27,7 @@ List* createList()
 
 Position* createPosition()
 {
-
+    return calloc(1, sizeof(Position));
 }
 
 bool isEnd(Position* position)
