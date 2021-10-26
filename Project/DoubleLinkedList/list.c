@@ -55,9 +55,30 @@ void previous(Position* position) // Не забудб проверить на NULL
 
 }
 
-void remove(List* list, Position* position)
+void removeFirst(List* list, Position* position)
 {
 
+}
+
+void removeLast(List* list, Position* position)
+{
+
+}
+
+void remove(List* list, Position* position)
+{
+    if (position->position->next == NULL)
+    {
+        removeFirst(list, position);
+        return;
+    }
+    if (position->position->previous == NULL)
+    {
+        removeLast(list, position);
+        return;
+    }
+    position->position->previous->next = position->position->next;
+    position->position->next->previous = position->position->previous;
 }
 
 void deletePosition(Position* position)
