@@ -30,26 +30,6 @@ Position* createPosition()
 
 }
 
-bool isEnd(Position* position)
-{
-
-}
-
-void first(Position* position)
-{
-
-}
-
-void last(Position* position)
-{
-
-}
-
-void remove(List* list, Position* position)
-{
-
-}
-
 void deletePosition(Position* position)
 {
     free(position);
