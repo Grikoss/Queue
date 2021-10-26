@@ -88,7 +88,7 @@ int value(Position* position)
 
 void setValue(Position* position, int value)
 {
-
+    position->position->value = value;
 }
 
 void addBefore(List* list, Position* position)
