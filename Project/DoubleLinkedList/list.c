@@ -32,11 +32,7 @@ Position* createPosition()
 
 bool isEnd(Position* position)
 {
-    if (position->position->next == NULL)
-    {
-        return true;
-    }
-    return false;
+    return (position->position->next == NULL);
 }
 
 void first(List* list, Position* position)
