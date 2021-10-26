@@ -71,7 +71,7 @@ void deletePosition(Position* position)
 
 int value(Position* position)
 {
-
+    return position->position->value;
 }
 
 void setValue(Position* position, int value)
