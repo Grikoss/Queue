@@ -76,7 +76,7 @@ void remove(List* list, Position* position)
 
 void deletePosition(Position* position)
 {
-
+    free(position);
 }
 
 int value(Position* position)
