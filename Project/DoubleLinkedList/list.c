@@ -22,30 +22,34 @@ typedef struct Position
 
 List* createList()
 {
-
+    return calloc(1, sizeof(List));
 }
 
 Position* createPosition()
 {
-
+    return calloc(1, sizeof(Position));
 }
 
 bool isEnd(Position* position)
 {
-
+    if (position->position->next == NULL)
+    {
+        return true;
+    }
+    return false;
 }
 
-void first(Position* position)
+void first(List* list, Position* position)
 {
-
+    position->position = list->head;
 }
 
-void last(Position* position)
+void last(List* list, Position* position)
 {
-
+    position->position = list->tail;
 }
 
-int next(Position* position) // Не забудб проверить на NULL
+int next(Position* position) // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NULL
 {
     if (position->position->next == NULL)
     {
@@ -56,7 +60,7 @@ int next(Position* position) // Не забудб проверить на NULL
     return 0;
 }
 
-int previous(Position* position) // Не забудб проверить на NULL
+int previous(Position* position) // пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅ NULL
 {
     if (position->position->previous == NULL)
     {
@@ -79,7 +83,7 @@ void deletePosition(Position* position)
 
 int value(Position* position)
 {
-
+    return position->position->value;
 }
 
 void setValue(Position* position, int value)
